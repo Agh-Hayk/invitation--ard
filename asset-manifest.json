@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/invitation-card/static/css/main.6d345540.css",
+    "main.js": "/invitation-card/static/js/main.32de3fea.js",
+    "static/media/van.svg": "/invitation-card/static/media/van.f3c157a3ee6b1911be75e3507ee32062.svg",
+    "static/media/p5.jpg": "/invitation-card/static/media/p5.a6c13e7baa2dcd14504e.jpg",
+    "static/media/Montserratarm-Regular.otf": "/invitation-card/static/media/Montserratarm-Regular.5691450002b4287d010a.otf",
+    "static/media/nt.svg": "/invitation-card/static/media/nt.99eb8400e1e250aeed96b2403d99f9ad.svg",
+    "static/media/p1.jpg": "/invitation-card/static/media/p1.4667aebcb4f22db347fd.jpg",
+    "static/media/SHK_Dzeragir.otf": "/invitation-card/static/media/SHK_Dzeragir.706a377fba825da38f8f.otf",
+    "static/media/p4.jpg": "/invitation-card/static/media/p4.002fa83c472dbb1115e4.jpg",
+    "static/media/p2.jpg": "/invitation-card/static/media/p2.8804291bf2ac99c2d7ce.jpg",
+    "static/media/calendar.svg": "/invitation-card/static/media/calendar.71cbc73d0c5ea9c3140bfd5fcabd5edc.svg",
+    "static/media/p3.jpg": "/invitation-card/static/media/p3.650965314c2621a8e0e3.jpg",
+    "index.html": "/invitation-card/index.html",
+    "main.6d345540.css.map": "/invitation-card/static/css/main.6d345540.css.map",
+    "main.32de3fea.js.map": "/invitation-card/static/js/main.32de3fea.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d345540.css",
+    "static/js/main.32de3fea.js"
+  ]
+}
