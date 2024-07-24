@@ -10,6 +10,11 @@
 }
 
 @font-face {
+   font-family: Dzeragir2;
+   src: url("./fonts/ArmAllegroU.ttf");
+}
+
+@font-face {
    font-family: main;
    src: url("./fonts/Montserratarm-Regular.otf");
 }
@@ -116,10 +121,16 @@ body {
       h1 {
          text-align: center;
          font-size: 26px;
-         font-size: 52px;
+         font-size: 120px;
          letter-spacing: 6px;
-         line-height: 70px;
+         line-height: 145px;
+         font-weight: 100;
          color: white;
+         font-family: "Dzeragir2";
+
+         @media (max-width: 768px) {
+            font-size: 90px;
+         }
 
          span {
             color: #b8b8b8;
@@ -142,10 +153,26 @@ body {
    }
 
    &-calendar {
-      margin-top: 120px;
+      max-width: 500px;
+      margin: 120px auto 0;
       display: flex;
       justify-content: center;
-      padding: 0 16px;
+      padding: 0 24px;
+      flex-direction: column;
+
+      h3 {
+         font-family: "Dzeragir";
+         text-align: center;
+         margin-bottom: 48px;
+         font-size: 40px;
+         text-align: center;
+      }
+
+      p {
+         text-align: center;
+         font-size: 18px;
+         margin-bottom: 48px;
+      }
 
       img {
          width: 100%;
@@ -156,10 +183,17 @@ body {
 
          .love {
             position: absolute;
-            left: -15px;
-            bottom: -14px;
+            left: -13px;
+            bottom: -9px;
             width: 55px;
             animation: pulse 1s infinite;
+            @media (max-width: 500px) {
+               width: 50px;
+            }
+
+            @media (max-width: 400px) {
+               width: 44px;
+            }
          }
       }
    }
@@ -171,7 +205,7 @@ body {
       justify-content: center;
       gap: 10px;
       align-items: flex-start;
-      padding: 0 16px;
+      padding: 0 24px;
 
       &-one {
          object-position: center;
@@ -214,7 +248,7 @@ body {
       // max-width: 400px;
       width: 100%;
       margin: 0 auto;
-      padding: 80px 16px;
+      padding: 24px 16px;
       position: relative;
 
       &-bg {
@@ -224,7 +258,7 @@ body {
          width: 100%;
          height: 100%;
          z-index: -1;
-         filter: brightness(0.4);
+         filter: brightness(0.3);
          object-fit: cover;
       }
 
@@ -238,27 +272,39 @@ body {
 
       div {
          max-width: 400px;
-         margin: 0 auto 34px;
+         margin: 0 auto;
          display: flex;
          align-items: center;
          justify-content: space-between;
+         flex-direction: column;
+         width: 100%;
+
+         &:not(:last-child) {
+            border-bottom: 1px solid #ffffff5c;
+            padding-bottom: 24px;
+            margin-bottom: 24px;
+         }
 
          h5 {
-            font-size: 20px;
+            font-size: 26px;
             min-width: 60px;
             font-weight: bold;
             color: white;
+            margin-bottom: 16px;
          }
 
          p {
             font-size: 18px;
-            width: 220px;
+            width: auto;
             color: white;
+            // width: 183px;
+            text-align: center;
          }
 
          img {
-            margin: 0 30px;
-            width: 35px;
+            // margin-left: 40px;
+            width: 60px;
+            margin-bottom: 16px;
          }
       }
    }
@@ -270,7 +316,7 @@ body {
       max-width: 400px;
       width: 100%;
       margin: 120px auto 0;
-      padding: 0 16px;
+      padding: 0 24px;
 
       h3 {
          font-family: "Dzeragir";
@@ -279,10 +325,47 @@ body {
          font-size: 40px;
       }
 
+      &-bg {
+         width: 100%;
+      }
+
+      &-icon {
+         width: 55px;
+         margin-bottom: 48px;
+      }
+
+      & > div:not(:last-child) {
+         margin-bottom: 100px;
+      }
+
       & > div {
          display: flex;
          flex-direction: column;
-         margin-bottom: 48px;
+         align-items: center;
+
+         p {
+            text-align: center;
+            color: #232323;
+            font-size: 20px;
+            margin-bottom: 48px;
+         }
+
+         button {
+            background-color: #232323;
+            border-radius: 30px;
+            font-size: 22px;
+            color: white;
+            padding: 20px 0;
+            width: 250px;
+            margin-top: 48px;
+            cursor: pointer;
+            outline: none;
+            border: none;
+
+            &:hover {
+               background-color: #3a3a3a;
+            }
+         }
       }
    }
 
@@ -291,13 +374,126 @@ body {
       max-width: 400px;
       width: 100%;
       margin: 120px auto;
-      padding: 0 16px;
+      padding: 0 24px;
 
       h3 {
          font-family: "Dzeragir";
          text-align: center;
          margin-bottom: 48px;
          font-size: 40px;
+      }
+   }
+
+   &-telegram {
+      max-width: 450px;
+      margin: 120px auto;
+      display: flex;
+      justify-content: center;
+      padding: 0 24px;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+         width: 80px;
+         margin-bottom: 48px;
+      }
+
+      h3 {
+         font-family: "Dzeragir";
+         text-align: center;
+         margin-bottom: 48px;
+         font-size: 40px;
+         text-align: center;
+      }
+
+      p {
+         text-align: center;
+         font-size: 18px;
+         margin-bottom: 48px;
+      }
+
+      button {
+         background-color: #232323;
+         border-radius: 30px;
+         font-size: 22px;
+         color: white;
+         padding: 20px 0;
+         width: 250px;
+         cursor: pointer;
+         outline: none;
+         border: none;
+
+         &:hover {
+            background-color: #3a3a3a;
+         }
+      }
+   }
+
+   &-form {
+      max-width: 450px;
+      margin: 120px auto;
+      display: flex;
+      justify-content: center;
+      padding: 0 24px;
+      flex-direction: column;
+      align-items: center;
+
+      h3 {
+         font-family: "Dzeragir";
+         text-align: center;
+         margin-bottom: 48px;
+         font-size: 40px;
+         text-align: center;
+      }
+
+      & > p {
+         text-align: center;
+         font-size: 18px;
+         margin-bottom: 12px;
+      }
+
+      &-wrapper {
+         p {
+            margin: 35px 0 10px;
+         }
+
+         &-item1 {
+            div {
+               margin-bottom: 12px;
+            }
+            input {
+               width: 100%;
+               border: none;
+               border-bottom: 1px solid #232323;
+               outline: none;
+            }
+         }
+
+         &-item2 {
+            div {
+               margin-bottom: 12px;
+               label {
+                  margin-left: 8px;
+               }
+            }
+         }
+      }
+
+      button {
+         background-color: #232323;
+         border-radius: 30px;
+         font-size: 22px;
+         color: white;
+         padding: 20px 0;
+         width: 250px;
+         cursor: pointer;
+         outline: none;
+         border: none;
+         margin-top: 48px;
+
+         &:hover {
+            background-color: #3a3a3a;
+         }
       }
    }
 }
