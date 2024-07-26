@@ -4,7 +4,6 @@ import Image3 from "../assets/images/p3.jpg";
 import Image4 from "../assets/images/p4.jpg";
 import Image5 from "../assets/images/p5.jpg";
 import CalenddarSvg from "../assets/images/calendar.svg";
-import StarImage from "../assets/images/star.png";
 import TelegramImg from "../assets/images/telegram.png";
 import CarImage from "../assets/images/car.png";
 import AvartImage from "../assets/images/avart.svg";
