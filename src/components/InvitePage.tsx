@@ -33,13 +33,13 @@ const TIMING_LIST = [
 
 const LOCATIONS_LIST = [
    {
-      title: "Պսակադրությունը կանցկացվի Նարեկ եկեղեցում",
+      title: "Պսակադրությունը տեղի կունենա Սուրբ Գրիգոր Նարեկացի եկեղեցում",
       img: NarekTime,
       link: "https://maps.app.goo.gl/fQxQdG9EAKyssagV8",
       icon: Loc1,
    },
    {
-      title: "Տոնական խնջույքը կանցկացվի Վան ռեստորանում",
+      title: "Տոնական խնջույքը տեղի կունենա Վան ռեստորանում",
       img: VanImage,
       link: "https://maps.app.goo.gl/P76bndQkEcXchkMY9",
       icon: Loc2,
@@ -64,7 +64,13 @@ const InvitePage = () => {
             </video>
             <h1>
                Նարեկ <br />{" "}
-               <img style={{ width: "135px" }} src={AvartImage} alt="img" />
+               <img
+                  data-aos="zoom-in"
+                  data-aos-duration="2000"
+                  style={{ width: "135px" }}
+                  src={AvartImage}
+                  alt="img"
+               />
                <br /> Իրինա
             </h1>
          </div>
@@ -81,14 +87,24 @@ const InvitePage = () => {
             </div>
          </div>
          <div className="invite-page-photos">
-            <img className="invite-page-photos-one" src={Image2} alt="Image2" />
+            <img
+               data-aos-duration="3000"
+               data-aos="flip-right"
+               className="invite-page-photos-one"
+               src={Image2}
+               alt="Image2"
+            />
             <div>
                <img
+                  data-aos="flip-left"
+                  data-aos-duration="3000"
                   className="invite-page-photos-two"
                   src={Image3}
                   alt="Image3"
                />
                <img
+                  data-aos-duration="3000"
+                  data-aos="flip-left"
                   className="invite-page-photos-three"
                   src={Image4}
                   alt="Image5"
@@ -99,7 +115,7 @@ const InvitePage = () => {
             <img className="invite-page-timing-bg" src={Image5} alt="img" />
             <h3>Օրվա ծրագիր</h3>
             {TIMING_LIST.map((el) => (
-               <div key={el.title}>
+               <div key={el.title} data-aos="fade-up" data-aos-duration="2000">
                   <img src={el.image} alt="star icon" />
                   <h5>{el.time}</h5>
                   <p>{el.title}</p>
@@ -117,6 +133,8 @@ const InvitePage = () => {
                   />
                   <p>{el.title}</p>
                   <img
+                     data-aos="zoom-in"
+                     data-aos-duration="3000"
                      className="invite-page-locations-bg"
                      src={el.img}
                      alt="location"
@@ -130,6 +148,23 @@ const InvitePage = () => {
                   </button>
                </div>
             ))}
+         </div>
+
+         <div className="invite-page-timer">
+            <h3>Հարսանիքին մնացել է․․․</h3>
+            <Countdown
+               format="D[օր] HH[ժ] mm[ր] ss[վ]"
+               title=""
+               value={deadline}
+               onFinish={onFinish}
+               valueStyle={{
+                  fontSize: "44px",
+                  fontWeight: "lighter",
+                  fontFamily: "Dzeragir",
+                  textAlign: "center",
+                  // color: "white",
+               }}
+            />
          </div>
 
          <div className="invite-page-telegram">
@@ -149,23 +184,7 @@ const InvitePage = () => {
             </button>
          </div>
 
-         <div className="invite-page-timer">
-            <h3>Հարսանիքին մնացել է․․․</h3>
-            <Countdown
-               format="D[օր] HH[ժ] mm[ր] ss[վ]"
-               title=""
-               value={deadline}
-               onFinish={onFinish}
-               valueStyle={{
-                  fontSize: "44px",
-                  fontWeight: "lighter",
-                  fontFamily: "Dzeragir",
-                  textAlign: "center",
-                  // color: "white",
-               }}
-            />
-         </div>
-         <form className="invite-page-form" action="">
+         {/* <form className="invite-page-form" action="">
             <h3>Invite</h3>
             <p>Խնդրում ենք լրացնել ստորև ներկայացված հարցաթերթիկը։</p>
             <div className="invite-page-form-wrapper">
@@ -258,7 +277,7 @@ const InvitePage = () => {
             >
                Ուղարկել
             </button>
-         </form>
+         </form> */}
       </div>
    );
 };

@@ -103,6 +103,7 @@ body {
       overflow: hidden;
 
       & > video {
+         background-color: #313131;
          position: absolute;
          left: 0;
          top: 0;
@@ -153,7 +154,7 @@ body {
    }
 
    &-calendar {
-      max-width: 500px;
+      max-width: 375px;
       margin: 120px auto 0;
       display: flex;
       justify-content: center;
@@ -185,13 +186,10 @@ body {
             position: absolute;
             left: -13px;
             bottom: -9px;
-            width: 55px;
+            width: 47px;
             animation: pulse 1s infinite;
-            @media (max-width: 500px) {
-               width: 50px;
-            }
 
-            @media (max-width: 400px) {
+            @media (max-width: 370px) {
                width: 44px;
             }
          }
