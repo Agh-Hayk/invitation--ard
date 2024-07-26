@@ -1,5 +1,5 @@
 import { FC } from "react";
-import HeaderImg from "../assets/images/p1.jpg";
+import HeaderImg from "../assets/images/p1s.jpg";
 
 interface IHiPage {
    setIsHiPage: React.Dispatch<React.SetStateAction<boolean>>;

@@ -1,15 +1,16 @@
 // import HeaderImg from "../assets/images/pire.jpg";
-import Image2 from "../assets/images/p2.jpg";
-import Image3 from "../assets/images/p3.jpg";
-import Image4 from "../assets/images/p4.jpg";
-import Image5 from "../assets/images/p5.jpg";
+import Image2 from "../assets/images/p2s.jpg";
+import Image3 from "../assets/images/p3s.jpg";
+import Image4 from "../assets/images/p4s.jpg";
+import Image5 from "../assets/images/p5s.jpg";
+import Image6 from "../assets/images/p6s.jpg";
 import CalenddarSvg from "../assets/images/calendar.svg";
-import TelegramImg from "../assets/images/telegram.png";
-import CarImage from "../assets/images/car.png";
+import TelegramImg from "../assets/images/telegrams.png";
+import CarImage from "../assets/images/cars.png";
 import AvartImage from "../assets/images/avart.svg";
 import PsakadrutyunImage from "../assets/images/psakadrutyun.svg";
 import SrahImage from "../assets/images/srah.svg";
-import LoveIcon from "../assets/images/love.png";
+import LoveIcon from "../assets/images/loves.png";
 import VanImage from "../assets/images/van.svg";
 import NarekTime from "../assets/images/nt.svg";
 import Loc1 from "../assets/images/loc1.svg";
@@ -23,7 +24,7 @@ const TIMING_LIST = [
    { title: "Հարսի տուն", time: "10:00", image: CarImage },
    {
       title: "Պսակադրության արարողություն",
-      time: "15:30",
+      time: "13:00",
       image: PsakadrutyunImage,
    },
    { title: "Հարսանյաց խնջույք", time: "17:00", image: SrahImage },
@@ -34,13 +35,13 @@ const LOCATIONS_LIST = [
    {
       title: "Պսակադրությունը տեղի կունենա Սուրբ Գրիգոր Նարեկացի եկեղեցում",
       img: NarekTime,
-      link: "https://maps.app.goo.gl/fQxQdG9EAKyssagV8",
+      link: "https://yandex.ru/maps/-/CDW6z869",
       icon: Loc1,
    },
    {
       title: "Տոնական խնջույքը տեղի կունենա Վան ռեստորանում",
       img: VanImage,
-      link: "https://maps.app.goo.gl/P76bndQkEcXchkMY9",
+      link: "https://yandex.ru/maps/-/CDW6zTlt",
       icon: Loc2,
    },
 ];
@@ -57,16 +58,16 @@ const InvitePage = () => {
                <source src={"v1.mp4"} type="video/mp4" />
                Your browser does not support the video tag.
             </video> */}
-            <video width="100%" height="auto" autoPlay loop muted>
+            {/* <video width="100%" height="auto" autoPlay loop muted>
                <source src={"/video/v2.mp4"} type="video/mp4" />
                Your browser does not support the video tag.
-            </video>
+            </video> */}
+            <img className="invite-page-header-img" src={Image6} alt="img6" />
             <h1>
                Նարեկ <br />{" "}
                <img
                   data-aos="zoom-in"
                   data-aos-duration="2000"
-                  style={{ width: "135px" }}
                   src={AvartImage}
                   alt="img"
                />
@@ -87,29 +88,47 @@ const InvitePage = () => {
          </div>
          <div className="invite-page-photos">
             <img
-               data-aos-duration="3000"
-               data-aos="flip-right"
+               data-aos="zoom-in"
+               data-aos-duration="2600"
                className="invite-page-photos-one"
                src={Image2}
                alt="Image2"
             />
             <div>
                <img
-                  data-aos="flip-left"
-                  data-aos-duration="3000"
+                  data-aos="zoom-in"
+                  data-aos-duration="2800"
                   className="invite-page-photos-two"
                   src={Image3}
                   alt="Image3"
                />
                <img
+                  data-aos="zoom-in"
                   data-aos-duration="3000"
-                  data-aos="flip-left"
                   className="invite-page-photos-three"
                   src={Image4}
                   alt="Image5"
                />
             </div>
          </div>
+
+         <div className="invite-page-timer">
+            <h3>Հարսանիքին մնացել է․․․</h3>
+            <Countdown
+               format="D[օր] HH[ժ] mm[ր] ss[վ]"
+               title=""
+               value={deadline}
+               onFinish={onFinish}
+               valueStyle={{
+                  fontSize: "44px",
+                  fontWeight: "lighter",
+                  fontFamily: "Dzeragir",
+                  textAlign: "center",
+                  // color: "white",
+               }}
+            />
+         </div>
+
          <div className="invite-page-timing">
             <img className="invite-page-timing-bg" src={Image5} alt="img" />
             <h3>Օրվա ծրագիր</h3>
@@ -147,23 +166,6 @@ const InvitePage = () => {
                   </button>
                </div>
             ))}
-         </div>
-
-         <div className="invite-page-timer">
-            <h3>Հարսանիքին մնացել է․․․</h3>
-            <Countdown
-               format="D[օր] HH[ժ] mm[ր] ss[վ]"
-               title=""
-               value={deadline}
-               onFinish={onFinish}
-               valueStyle={{
-                  fontSize: "44px",
-                  fontWeight: "lighter",
-                  fontFamily: "Dzeragir",
-                  textAlign: "center",
-                  // color: "white",
-               }}
-            />
          </div>
 
          <div className="invite-page-telegram">
